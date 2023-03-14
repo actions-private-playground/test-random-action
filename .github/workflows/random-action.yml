@@ -8,9 +8,12 @@ on:
       - completed
 
 permissions:
-  contents: read
+  contents: write
   statuses: write
   issues: write
+  pull-requests: write
+  checks: write
+  actions: write
 
 jobs:
   download-metadata:
