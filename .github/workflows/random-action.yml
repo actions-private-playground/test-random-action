@@ -32,10 +32,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Log Artifact data
-        uses: jamacku/random-action@devel
+      - uses: jamacku/random-action@devel
         with:
-          pr: ${{ toJSON(needs.download-metadata.outputs.pr-metadata).number }}
+          pr: ${{ fromJSON(needs.download-metadata.outputs.pr-metadata).number }}
           token: ${{ secrets.GITHUB_TOKEN }}
 
 ...
