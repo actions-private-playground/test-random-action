@@ -21,5 +21,5 @@ jobs:
       - name: Upload artifact with gathered metadata
         uses: actions/upload-artifact@v3
         with:
-          name: Pull Request Metadata
+          name: pr-metadata
           path: ${{ steps.Metadata.outputs.metadata-file }}
