@@ -35,7 +35,7 @@ jobs:
       - name: Log Artifact data
         uses: jamacku/random-action@devel
         with:
-          pr-number: ${{ toJSON(needs.download-metadata.outputs.pr-metadata).number }}
+          pr: ${{ toJSON(needs.download-metadata.outputs.pr-metadata).number }}
           token: ${{ secrets.GITHUB_TOKEN }}
 
 ...
